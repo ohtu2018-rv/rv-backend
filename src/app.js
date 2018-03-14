@@ -13,10 +13,12 @@
     var account_route = require('./routes/account');
     var register_route = require('./routes/register');
     var purchase_route = require('./routes/purchase');
+    var product_route = require('./routes/product');
     app.use('/api/v1/user/authenticate', auth_route);
     app.use('/api/v1/user/account', account_route);
     app.use('/api/v1/user/register', register_route);
     app.use('/api/v1/product/purchase', purchase_route);
+    app.use('/api/v1/product/product', product_route); // this route sucks
 
     module.exports = app;
 }());
