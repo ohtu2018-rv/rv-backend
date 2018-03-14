@@ -1,5 +1,13 @@
 const knex = require('./knex');
 
+module.exports.getProducts = () => {
+    return knex('RVITEM')
+        .select('*')
+        .then((items) => {
+            return items;
+        });
+};
+
 /**
  * Finds a product by its barcode.
  * 
